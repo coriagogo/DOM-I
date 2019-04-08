@@ -44,80 +44,119 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 // create nav items
-let services = document.getElementsByTagName('a')[0];
+const navItems = document.querySelectorAll('nav a');
+
+
+const services = navItems[0];
 services.innerText = siteContent['nav']['nav-item-1'];
+services.style.color = 'green';
 
-let product = document.getElementsByTagName('a')[1];
+const product = navItems[1];
 product.innerText = siteContent['nav']['nav-item-2'];
+product.style.color = 'green';
 
-let vision = document.getElementsByTagName('a')[2];
+const vision = navItems[2];
 vision.innerText = siteContent['nav']['nav-item-3'];
+vision.style.color = 'green';
 
-let features = document.getElementsByTagName('a')[3];
+const features = navItems[3];
 features.innerText = siteContent['nav']['nav-item-4'];
+features.style.color = 'green';
 
-let about = document.getElementsByTagName('a')[4];
+const about = navItems[4];
 about.innerText = siteContent['nav']['nav-item-5'];
+about.style.color = 'green';
 
-let contact = document.getElementsByTagName('a')[5];
+const contact = navItems[5];
 contact.innerText = siteContent['nav']['nav-item-6'];
+contact.style.color = 'green';
+
+// creating new nav with appendChild
+
+const addedNav1 = document.createElement('a');
+const addedNav1Text = document.createTextNode ('New nav');
+
+addedNav1.appendChild(addedNav1Text);
+addedNav1.style.padding = "0 0 0 20px";
+addedNav1.style.color = 'green';
+
+contact.appendChild(addedNav1);
+
+// creating space between new nav item
+
+const addedNav2 = document.createElement('a');
+const addedNav2Text = document.createTextNode ('New nav 2');
+
+addedNav2.appendChild(addedNav2Text);
+addedNav2.style.padding = "0 20px 0 0";
+addedNav2.style.color = 'green';
+
+services.prepend(addedNav2);
+
+
 
 // cta
-let ctaImg = document.getElementById("cta-img");
+const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-let ctaHeader = document.getElementsByTagName('h1')[0];
+const ctaHeader = document.getElementsByTagName('h1')[0];
 ctaHeader.innerText = siteContent['cta']['h1'];
 
-let ctaBtn = document.getElementsByTagName('button')[0];
+const ctaBtn = document.getElementsByTagName('button')[0];
 ctaBtn.innerText = siteContent['cta']['button'];
 
 // main content headers
 
-let mainContentFeaturesH = document.getElementsByTagName('h4')[0];
+
+
+const mainContentFeaturesH = document.getElementsByTagName('h4')[0];
 mainContentFeaturesH.innerText = siteContent['main-content']['features-h4'];
 
-let mainContentAboutH = document.getElementsByTagName('h4')[1];
+const mainContentAboutH = document.getElementsByTagName('h4')[1];
 mainContentAboutH.innerText = siteContent['main-content']['about-h4'];
 
-let mainContentServicesH = document.getElementsByTagName('h4')[2];
+const mainContentServicesH = document.getElementsByTagName('h4')[2];
 mainContentServicesH.innerText = siteContent['main-content']['services-h4'];
 
-let mainContentProductH = document.getElementsByTagName('h4')[3];
+const mainContentProductH = document.getElementsByTagName('h4')[3];
 mainContentProductH.innerText = siteContent['main-content']['product-h4'];
 
-let mainContentVisionH = document.getElementsByTagName('h4')[4];
+const mainContentVisionH = document.getElementsByTagName('h4')[4];
 mainContentVisionH.innerText = siteContent['main-content']['vision-h4'];
 
 // middle image
 
-let middleImg = document.getElementById("middle-img");
+const middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // main content
 
-let mainContentFeatures = document.getElementsByTagName('p')[0];
+const mainContentFeatures = document.getElementsByTagName('p')[0];
 mainContentFeatures.innerText = siteContent['main-content']['features-content'];
 
-let mainContentAbout = document.getElementsByTagName('p')[1];
+const mainContentAbout = document.getElementsByTagName('p')[1];
 mainContentAbout.innerText = siteContent['main-content']['about-content'];
 
-let mainContentServices = document.getElementsByTagName('p')[2];
+const mainContentServices = document.getElementsByTagName('p')[2];
 mainContentServices.innerText = siteContent['main-content']['services-content'];
 
-let mainContentProduct = document.getElementsByTagName('p')[3];
+const mainContentProduct = document.getElementsByTagName('p')[3];
 mainContentProduct.innerText = siteContent['main-content']['product-content'];
 
-let mainContentVision = document.getElementsByTagName('p')[4];
+const mainContentVision = document.getElementsByTagName('p')[4];
 mainContentVision.innerText = siteContent['main-content']['vision-content'];
 
 // contact
 
-let contactHeader = document.getElementsByTagName('h4')[5];
+const linebreak = document.createElement('br');
+
+const contactHeader = document.getElementsByTagName('h4')[5];
 contactHeader.innerText = siteContent['contact']['contact-h4'];
 
-let contactAddress = document.getElementsByTagName('p')[5];
+const contactAddress = document.getElementsByTagName('p')[5];
 contactAddress.innerText = siteContent['contact']['address'];
+
+
 
 let contactPhone = document.getElementsByTagName('p')[6];
 contactPhone.innerText = siteContent['contact']['phone'];
