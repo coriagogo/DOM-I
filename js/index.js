@@ -105,6 +105,15 @@ ctaHeader.innerText = siteContent['cta']['h1'];
 const ctaBtn = document.getElementsByTagName('button')[0];
 ctaBtn.innerText = siteContent['cta']['button'];
 
+// stretch goal change styles with button
+
+ctaBtn.addEventListener('click', yourFunction);
+function yourFunction() {
+  services.setAttribute('style', 'color: pink;');
+  about.setAttribute('style', 'background-color: yellow;');
+  ctaImg.setAttribute('style', 'background-color: green;');
+}
+
 // main content headers
 
 
@@ -158,14 +167,14 @@ contactAddress.innerText = siteContent['contact']['address'];
 
 
 
-let contactPhone = document.getElementsByTagName('p')[6];
+const contactPhone = document.getElementsByTagName('p')[6];
 contactPhone.innerText = siteContent['contact']['phone'];
 
-let contactEmail = document.getElementsByTagName('p')[7];
+const contactEmail = document.getElementsByTagName('p')[7];
 contactEmail.innerText = siteContent['contact']['email'];
 
 // footer
 
-let footerCopy = document.getElementsByTagName('p')[8];
+const footerCopy = document.getElementsByTagName('p')[8];
 footerCopy.innerText = siteContent['footer']['copyright'];
 
